@@ -4,7 +4,7 @@
 :sparkles: 블로그에 버전관리 및 오류사항, 궁금증 등 정리 (최신 UPDATE : 22/08/01) <br>
 :star: url : https://hxxxxxl.tistory.com/category/Spring/SpringBoot
 
-:calender: DATE : 22/04/20(수) ~ 22/04/28(목) , 22/08/01(월) ~ 22/08/31(예정)
+:date: DATE : 22/04/20(수) ~ 22/04/28(목) , 22/08/01(월) ~ 22/08/31(예정)
 
 
 - :books: 정리방법 : 개인적인 정리는 노션에 기록하고 있고 블로그에는 좀더 정리된 형태로 올릴 생각이다. 
