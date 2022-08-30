@@ -37,7 +37,7 @@ public class PostsApiControllerTest {
     }
 
     @Test
-    public void Posts_등록된다() throws Exception {
+    public void Posts_enroll() throws Exception {
         //given
         String title = "title";
         String content = "content";

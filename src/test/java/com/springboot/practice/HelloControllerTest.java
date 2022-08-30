@@ -1,6 +1,7 @@
 package com.springboot.practice;
 
 
+import com.springboot.practice.web.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,15 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class) //생략가능
-@WebMvcTest(controllers = HelloControllerTest.class)
+//@SpringBootTest(classes = HelloController.class)
+@WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
+
     @Autowired
     private MockMvc mvc;
 
     @Test
-    public void hello가_리턴된다() throws Exception{
+    public void helloReturnExpected() throws Exception{
         String hello = "hello";
 
         mvc.perform(get("/hello"))
