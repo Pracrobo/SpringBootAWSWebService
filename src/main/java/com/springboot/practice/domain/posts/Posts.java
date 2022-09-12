@@ -12,7 +12,7 @@ import javax.persistence.Column;
 @Getter
 @NoArgsConstructor
 @EntityScan
-public class Posts {
+public class Posts extends BaseTimeEntitiy{
     @Id
     @Generated()
     private Long id;

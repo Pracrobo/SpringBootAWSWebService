@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.time.LocalDateTime;
 import java.util.
         List;
 
@@ -61,5 +62,23 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
 
+    }
+
+    @Test
+    public void BBasseTimeEntitiy_enroll() {
+        //given
+        LocalDateTime now = LocalDateTime.of(2019, 6, 4, 0, 0,0);
+        postsRepository.save(Posts.builder().title("title").content("content").author("author").build());
+
+        //when
+        List<Posts> postsList = postsRepository.findAll();
+
+        //then
+        Posts posts = postsList.get(0);
+
+        System.out.println(">>>>>> createDate = "+posts.getCreatedDate()+", modifiedDatge = " +posts.getModifiedDate());
+
+        assertThat(posts.getCreatedDate()).isAfter(now);
+        assertThat(posts.getModifiedDate()).isAfter(now);
     }
 }
